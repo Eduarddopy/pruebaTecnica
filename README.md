@@ -1,48 +1,39 @@
-# Backend
-Java
-Spring Boot
-Spring Data JPA
-Spring Web
-PostgreSQL
-Lombok
+### Backend
+* Java, Spring Boot, Spring Data JPA, Spring Web, PostgreSQL, Lombok
+
+### Frontend
+* React, Vite, React Router DOM, Axios
 
 
-# Frontend
-React 
-Vite
-React Router DOM
-Axios
-
-Antes de ejecutar el proyecto, requisitos:
-
-* El proyecto fue hecho en Java 21, no encontré en el documento(prueba tecnica) alguna versión, así que me tomé la libertad de elegir
-Maven
-Node.js 18+
-PostgresSQL en el puerto 5432
+Antes de ejecutar el proyecto, asegúrate de contar con:
+* **Java 21**: No encontré una versión específica en el documento de la prueba técnica, así que me tomé la libertad de elegir esta versión.
+* **Maven**, **Node.js 18+** y **PostgreSQL** en el puerto `5432`.
 
 ## #1 Configuración de la base de datos
 
-Abrir terminal o pgAdmin
-Crear base de datos:  CREATE DATABASE prueba_tecnica;
+1. Abrir terminal o pgAdmin.
+2. Crear la base de datos:
+   ```sql
+   CREATE DATABASE prueba_tecnica;
 
-ejecutar los scripts de la carpeta db
+Ejecutar los scripts de la carpeta db
 
 psql -U postgres -d prueba_tecnica -f db/01_schema.sql
 psql -U postgres -d prueba_tecnica -f db/02_data.sql
 
 * Si el usuario no es "postgres" cambiar por el suyo
 
-## #2 Ejecutar el back
+## #2 Ejecutar el Backend
 
-En cd backend src/main/resources/application.properties Tiene por defecto mis credenciales, si son difirente modicarlas ahí o sobreecribirlas usando variables de entorno DB_USER y DB_PASSWORD
+En cd backend, el archivo src/main/resources/application.properties tiene por defecto mis credenciales. Si son diferentes, modifícalas ahí o sobrescríbelas usando las variables de entorno DB_USER y DB_PASSWORD.
 
-Compilar con  mvn clean spring-boot:run y se conectará en http://localhost:8080
+Compilar con: mvn clean spring-boot:run y Se conectará en http://localhost:8080.
 
-## #3 Ejecutar front
+## #3 Ejecutar el Frontend
 
-Terminal en cd frontend e instalar
+Abrir una terminal en cd frontend e instalar las dependencias:
 
-npm install, e iniciar con npm run dev. Usar la vista que proporciona la terminal despues del run dev
+npm install, e iniciar con npm run dev (Usar la vista (URL) que proporciona la terminal después del run dev).
 
 ## Endpoints de la API
 
