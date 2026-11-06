@@ -16,8 +16,9 @@ Antes de ejecutar el proyecto, asegúrate de contar con:
    ```sql
    CREATE DATABASE prueba_tecnica;
 
-Ejecutar los scripts de la carpeta db
+Ejecutar los scripts de la carpeta db:
 
+```bash
 psql -U postgres -d prueba_tecnica -f db/01_schema.sql
 psql -U postgres -d prueba_tecnica -f db/02_data.sql
 
@@ -27,7 +28,7 @@ psql -U postgres -d prueba_tecnica -f db/02_data.sql
 
 En cd backend, el archivo src/main/resources/application.properties tiene por defecto mis credenciales. Si son diferentes, modifícalas ahí o sobrescríbelas usando las variables de entorno DB_USER y DB_PASSWORD.
 
-Compilar con: mvn clean spring-boot:run y Se conectará en http://localhost:8080.
+Compilar con: mvn clean spring-boot:run y se conectará en http://localhost:8080.
 
 ## #3 Ejecutar el Frontend
 
