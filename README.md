@@ -23,6 +23,7 @@ psql -U postgres -d prueba_tecnica -f db/01_schema.sql
 psql -U postgres -d prueba_tecnica -f db/02_data.sql
 
 * Si el usuario no es "postgres" cambiar por el suyo
+```
 
 ## #2 Ejecutar el Backend
 
